@@ -1,4 +1,5 @@
 store/
 
-.env
 *.secret
+*.env
+!*.env.example

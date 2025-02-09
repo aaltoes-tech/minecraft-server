@@ -14,11 +14,12 @@ services:
       VELOCITY_BUILD_ID: "469"
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
-      CFG_VELOCITY_SECRET: $VELOCITY_SECRET
     volumes:
       - ./store/proxy:/server
       - ./velocity.secret:/config/velocity.secret
       - ./config/velocity.toml:/config/velocity.toml
+    env_file:
+      - ./proxy.env
     depends_on:
       - survival1
     restart: unless-stopped
@@ -38,6 +39,8 @@ services:
       PATCH_DEFINITIONS: /data/config/patch-definitions.json
       CFG_VELOCITY_ENABLED: "true"
       CFG_VELOCITY_SECRET_FILE: /data/config/velocity.secret
+    env_file:
+      - ./survival1.env
     volumes:
       - ./store/mc1:/data
       - ./mc1/config/patch-definitions.json:/data/config/patch-definitions.json
