@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  proxy:
+    user: $UID:$GID
+    image: itzg/bungeecord
+    ports:
+      - "25565:25565"
+    environment:
+      UID: $UID
+      GID: $GID
+      TYPE: "VELOCITY"
+      VELOCITY_VERSION: "3.4.0-SNAPSHOT"
+      VELOCITY_BUILD_ID: "469"
+      REPLACE_ENV_VARIABLES: "TRUE"
+      ENV_VARIABLE_PREFIX: "CFG_"
+      CFG_VELOCITY_SECRET: $VELOCITY_SECRET
+    volumes:
+      - ./store/proxy:/server
+      - ./velocity.secret:/config/velocity.secret
+      - ./config/velocity.toml:/config/velocity.toml
+    depends_on:
+      - survival1
+    restart: unless-stopped
+
+  survival1:
+    user: $UID:$GID
+    image: itzg/minecraft-server
+    environment:
+      UID: $UID
+      GID: $GID
+      TYPE: "PAPER"
+      EULA: "TRUE"
+      PAPER_VERSION: "1.21.4"
+      ONLINE_MODE: "false"
+      REPLACE_ENV_VARIABLES: "TRUE"
+      ENV_VARIABLE_PREFIX: "CFG_"
+      PATCH_DEFINITIONS: /data/config/patch-definitions.json
+      CFG_VELOCITY_ENABLED: "true"
+      CFG_VELOCITY_SECRET_FILE: /data/config/velocity.secret
+    volumes:
+      - ./store/mc1:/data
+      - ./mc1/config/patch-definitions.json:/data/config/patch-definitions.json
+      - ./velocity.secret:/data/config/velocity.secret
+      - ./mc1/plugins:/plugins
+    restart: unless-stopped
+
+volumes:
+  proxy-data:
