@@ -33,7 +33,7 @@ services:
       TYPE: "PAPER"
       EULA: "TRUE"
       PAPER_VERSION: "1.21.4"
-      ONLINE_MODE: "false"
+      ONLINE_MODE: "FALSE"
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
       PATCH_DEFINITIONS: /data/config/patch-definitions.json
