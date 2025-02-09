@@ -6,14 +6,14 @@
         {
           "$set": {
             "path": "$.proxies.velocity.enabled",
-            "value": "true",
+            "value": "${CFG_VELOCITY_ENABLED}",
             "value-type": "bool"
           }
         },
         {
           "$set": {
             "path": "$.proxies.velocity.secret",
-            "value": "c82Q+bcoQ4claDgNQ0qe/zcNLDAuhfOjv10Vxh04XTc="
+            "value": "${CFG_VELOCITY_SECRET}"
           }
         }
       ]
