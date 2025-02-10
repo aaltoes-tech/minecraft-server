@@ -42,9 +42,9 @@ services:
       PLUGINS_FILE: "/plugins.txt"
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
-      PATCH_DEFINITIONS: /data/config/patch-definitions.json
+      PATCH_DEFINITIONS: /config/patch-definitions.json
       CFG_VELOCITY_ENABLED: "true"
-      CFG_VELOCITY_SECRET_FILE: /data/config/velocity.secret
+      CFG_VELOCITY_SECRET_FILE: /config/velocity.secret
       CFG_MYSQL_HOST: database
       CFG_MYSQL_PORT: 3306
     env_file:
