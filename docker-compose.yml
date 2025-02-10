@@ -48,8 +48,8 @@ services:
       - ./store/mc1:/data
       - ./mc1/plugins:/plugins
       - ./mc1/config/plugins.txt:/plugins.txt
-      - ./mc1/config/patch-definitions.json:/data/config/patch-definitions.json
-      - ./velocity.secret:/data/config/velocity.secret
+      - ./mc1/config/patch-definitions.json:/config/patch-definitions.json
+      - ./velocity.secret:/config/velocity.secret
     restart: unless-stopped
 
 volumes:
