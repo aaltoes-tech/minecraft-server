@@ -1,6 +1,10 @@
 store/
 
-mc1/plugins
+mc1/plugins/*.jar
+!mc1/plugins/.gitkeep
+
+proxy/plugins/*.jar
+!proxy/plugins/.gitkeep
 
 *.secret
 *.env
