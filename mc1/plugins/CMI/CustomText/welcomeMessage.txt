@@ -1,0 +1,4 @@
+&6Welcome, &a%cmi_user_display_name% &6to &bMyServer&6!
+&eYour rank: &a%cmi_user_rank_displayname% &e| Balance: &a%cmi_user_balance_formatted%&e.
+&6Players online: &a%cmi_server_online% &6| Your ping: &a%cmi_user_ping%ms&6.
+&eEnjoy your stay and explore our world!
