@@ -19,6 +19,7 @@ services:
       CFG_MYSQL_PORT: 3306
     volumes:
       - ./store/proxy:/server
+      - ./proxy/plugins:/plugins
       - ./velocity.secret:/config/velocity.secret
       - ./proxy/config/plugins.txt:/config/plugins.txt
       - ./proxy/config/velocity.toml:/config/velocity.toml
