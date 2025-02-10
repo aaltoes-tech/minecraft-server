@@ -50,7 +50,22 @@ services:
       - ./mc1/config/plugins.txt:/plugins.txt
       - ./mc1/config/patch-definitions.json:/config/patch-definitions.json
       - ./velocity.secret:/config/velocity.secret
+    depends_on:
+      - database
+    restart: unless-stopped
+
+  database:
+    image: mariadb:11.4.5
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "minecraft"
+      MYSQL_USER: "minecraft"
+      MYSQL_PASSWORD: "minecraft"
+      MYSQL_ROOT_HOST: "%"
+    volumes:
+      - database-data:/var/lib/mysql
     restart: unless-stopped
 
 volumes:
+  database-data:
   proxy-data:
