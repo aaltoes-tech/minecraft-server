@@ -18,8 +18,8 @@ services:
     volumes:
       - ./store/proxy:/server
       - ./velocity.secret:/config/velocity.secret
-      - ./config/velocity.plugins:/config/plugins.txt
-      - ./config/velocity.toml:/config/velocity.toml
+      - ./proxy/config/plugins.txt:/config/plugins.txt
+      - ./proxy/config/velocity.toml:/config/velocity.toml
     env_file:
       - ./proxy.env
     depends_on:
