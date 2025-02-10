@@ -1,5 +1,7 @@
 store/
 
+mc1/plugins
+
 *.secret
 *.env
 !*.env.example

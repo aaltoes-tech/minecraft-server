@@ -12,11 +12,13 @@ services:
       TYPE: "VELOCITY"
       VELOCITY_VERSION: "3.4.0-SNAPSHOT"
       VELOCITY_BUILD_ID: "469"
+      PLUGINS_FILE: "/config/plugins.txt"
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
     volumes:
       - ./store/proxy:/server
       - ./velocity.secret:/config/velocity.secret
+      - ./config/velocity.plugins:/config/plugins.txt
       - ./config/velocity.toml:/config/velocity.toml
     env_file:
       - ./proxy.env
@@ -34,6 +36,7 @@ services:
       EULA: "TRUE"
       PAPER_VERSION: "1.21.4"
       ONLINE_MODE: "FALSE"
+      PLUGINS_FILE: "/plugins.txt"
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
       PATCH_DEFINITIONS: /data/config/patch-definitions.json
@@ -43,9 +46,10 @@ services:
       - ./survival1.env
     volumes:
       - ./store/mc1:/data
+      - ./mc1/plugins:/plugins
+      - ./mc1/config/plugins.txt:/plugins.txt
       - ./mc1/config/patch-definitions.json:/data/config/patch-definitions.json
       - ./velocity.secret:/data/config/velocity.secret
-      - ./mc1/plugins:/plugins
     restart: unless-stopped
 
 volumes:
