@@ -2,3 +2,5 @@ https://cdn.modrinth.com/data/1u6JkXh5/versions/4jRlujfz/worldedit-bukkit-7.3.10
 https://cdn.modrinth.com/data/DKY9btbd/versions/S1KKDczu/worldguard-bukkit-7.0.13-beta-2-dist.jar
 https://download.luckperms.net/1570/bukkit/loader/LuckPerms-Bukkit-5.4.153.jar
 https://github.com/ViaVersion/ViaVersion/releases/download/5.2.1/ViaVersion-5.2.1.jar
+https://ci.minebench.de/job/ChestShop-3/429/artifact/target/ChestShop.jar
+https://cdn.modrinth.com/data/Dc8RS2En/versions/lxkfUzrn/BankAccounts-1.10.2.jar
