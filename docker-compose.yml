@@ -41,6 +41,7 @@ services:
       PAPER_VERSION: "1.21.4"
       ONLINE_MODE: "FALSE"
       PLUGINS_FILE: "/plugins.txt"
+      SPAWN_PROTECTION: "0"
       REPLACE_ENV_VARIABLES: "TRUE"
       ENV_VARIABLE_PREFIX: "CFG_"
       PATCH_DEFINITIONS: /config/patch-definitions.json
