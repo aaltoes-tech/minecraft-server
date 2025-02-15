@@ -68,14 +68,14 @@ Alias:
     Tab: true
   # /cmi balance $1-
   balance:
-    Enabled: false
+    Enabled: true
     Tab: true
   bal:
     Enabled: false
     Tab: true
   # /cmi baltop $1-
   baltop:
-    Enabled: false
+    Enabled: true
     Tab: true
   # /cmi ban $1-
   ban:
@@ -385,7 +385,7 @@ Alias:
     Tab: true
   # /cmi generateworth $1-
   generateworth:
-    Enabled: false
+    Enabled: true
     Tab: true
   # /cmi getbook $1-
   getbook:
@@ -1001,7 +1001,7 @@ Alias:
     Tab: true
   # /cmi sell $1-
   sell:
-    Enabled: false
+    Enabled: true
     Tab: true
   # /cmi sendall $1-
   sendall:
@@ -1025,7 +1025,7 @@ Alias:
     Tab: true
   # /cmi setenchantworth $1-
   setenchantworth:
-    Enabled: false
+    Enabled: true
     Tab: true
   # /cmi setfirstspawn $1-
   setfirstspawn:
@@ -1053,7 +1053,7 @@ Alias:
     Tab: true
   # /cmi setworth $1-
   setworth:
-    Enabled: false
+    Enabled: true
     Tab: true
   # /cmi shadowmute $1-
   shadowmute:
@@ -1404,9 +1404,9 @@ Alias:
     Tab: true
   # /cmi worth $1-
   worth:
-    Enabled: false
+    Enabled: true
     Tab: true
   # /cmi worthlist $1-
   worthlist:
-    Enabled: false
+    Enabled: true
     Tab: true
