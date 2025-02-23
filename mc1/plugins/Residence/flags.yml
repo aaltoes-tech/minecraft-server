@@ -36,7 +36,7 @@ Global:
     # Applies to: Both
     anchor: true
     # Applies to: Both
-    animalkilling: false
+    animalkilling: true
     # Applies to: Residence
     animals: true
     # Applies to: Both
@@ -82,7 +82,7 @@ Global:
     # Applies to: Residence
     decay: true
     # Applies to: Both
-    destroy: false
+    destroy: true
     # Applies to: Both
     diode: true
     # Applies to: Both
@@ -156,7 +156,7 @@ Global:
     # Applies to: Residence
     lavaflow: true
     # Applies to: Both
-    leash: false
+    leash: true
     # Applies to: Both
     lever: true
     # Applies to: Residence
@@ -204,7 +204,7 @@ Global:
     # Applies to: Residence
     sanimals: true
     # Applies to: Both
-    shear: false
+    shear: true
     # Applies to: Residence
     shoot: true
     # Applies to: Residence
@@ -232,7 +232,7 @@ Global:
     # Applies to: Residence
     trample: true
     # Applies to: Both
-    vehicledestroy: false
+    vehicledestroy: true
     # Applies to: Residence
     waterflow: true
     # Applies to: Residence
@@ -254,7 +254,7 @@ Global:
     # Applies to: Both
     goathorn: true
     # Applies to: Both
-    harvest: false
+    harvest: true
     # Applies to: Residence
     safezone: false
   # This sets GUI items to represent each flag, if not given, then gray wool will be used
