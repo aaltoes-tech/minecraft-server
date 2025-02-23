@@ -15,6 +15,22 @@ Global:
       pvp: true
   # This gives permission to change certain flags to all groups, unless specifically denied to the group.
   FlagPermission:
+    # Applies to: Both
+    build: true
+    # Applies to: Both
+    use: true
+    # Applies to: Both
+    move: true
+    # Applies to: Both
+    container: true
+    # Applies to: Both
+    tp: true
+    # Applies to: Both
+    ignite: true
+    # Applies to: Residence
+    pvp: true
+    # Applies to: Both
+    command: true
     # Applies to: Player
     admin: true
     # Applies to: Both
@@ -37,8 +53,6 @@ Global:
     bed: true
     # Applies to: Both
     brew: true
-    # Applies to: Both
-    build: false
     # Applies to: Residence
     burn: true
     # Applies to: Both
@@ -54,11 +68,7 @@ Global:
     # Applies to: Residence
     cmonsters: true
     # Applies to: Both
-    command: false
-    # Applies to: Both
     commandblock: false
-    # Applies to: Both
-    container: false
     # Applies to: Residence
     coords: true
     # Applies to: Residence
@@ -132,8 +142,6 @@ Global:
     # Applies to: Residence
     icemelt: true
     # Applies to: Both
-    ignite: false
-    # Applies to: Both
     itemdrop: true
     # Applies to: Both
     itempickup: true
@@ -159,8 +167,6 @@ Global:
     mobkilling: true
     # Applies to: Residence
     monsters: true
-    # Applies to: Both
-    move: true
     # Applies to: Both
     nametag: true
     # Applies to: Residence
@@ -189,8 +195,6 @@ Global:
     place: true
     # Applies to: Both
     pressure: true
-    # Applies to: Residence
-    pvp: false
     # Applies to: Residence
     rain: true
     # Applies to: Residence
@@ -224,13 +228,9 @@ Global:
     # Applies to: Residence
     tnt: false
     # Applies to: Both
-    tp: true
-    # Applies to: Both
     trade: true
     # Applies to: Residence
     trample: true
-    # Applies to: Both
-    use: false
     # Applies to: Both
     vehicledestroy: false
     # Applies to: Residence

@@ -324,7 +324,7 @@ Global:
       - world
     Flags:
       # By setting this to false flags from list will not be protected from change while there is some one inside residence besides owner
-      Prevent: false
+      Prevent: true
       list:
       - pvp
   # The default group to use if Permissions fails to attach or your not using Permissions.
