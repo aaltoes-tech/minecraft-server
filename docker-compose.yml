@@ -1,11 +1,33 @@
 version: '3.8'
+networks:
+  minecraft-network:
+    driver: bridge
 
 services:
+  discord-bot:
+    networks:
+      - minecraft-network
+    image: node:18
+    user: $UID:$GID
+    working_dir: /app
+    volumes:
+      - ./discord:/app
+    command: node index.js
+    ports:
+      - "8080:8080" 
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+
   proxy:
+    networks:
+      - minecraft-network
     user: $UID:$GID
     image: itzg/bungeecord
     ports:
       - "25565:25565"
+      - "25565:25565/udp" 
+      - "24454:24454/udp"
     environment:
       UID: $UID
       GID: $GID
@@ -49,6 +71,8 @@ services:
       CFG_VELOCITY_SECRET_FILE: /config/velocity.secret
       CFG_MYSQL_HOST: database
       CFG_MYSQL_PORT: 3306
+    networks:
+      - minecraft-network
     env_file:
       - ./survival1.env
     volumes:
@@ -62,6 +86,8 @@ services:
     restart: unless-stopped
 
   database:
+    networks:
+      - minecraft-network
     image: mariadb:11.4.5
     environment:
       MYSQL_ROOT_HOST: "%"
@@ -74,3 +100,4 @@ services:
 volumes:
   database-data:
   proxy-data:
+  
