@@ -1,0 +1,10 @@
+name: Aaltoes
+version: '1.0'
+main: com.aaltoes.Aaltoes
+api-version: '1.21'
+authors: [oxrinz]
+description: A minimal Minecraft plugin
+commands:
+  hello:
+    description: Sends a hello message to the player
+    usage: /<command>
