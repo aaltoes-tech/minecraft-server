@@ -17,20 +17,19 @@ services:
       - "8080:8080" 
     environment:
       NODE_ENV: production
+    env_file:
+      - ./discord.env
     restart: unless-stopped
 
   proxy:
     networks:
       - minecraft-network
     user: $UID:$GID
-    image: itzg/bungeecord
+    image: itzg/bungeecord:java21
     ports:
       - "25565:25565"
-      - "25565:25565/udp" 
       - "24454:24454/udp"
     environment:
-      UID: $UID
-      GID: $GID
       TYPE: "VELOCITY"
       VELOCITY_VERSION: "3.4.0-SNAPSHOT"
       VELOCITY_BUILD_ID: "469"
@@ -54,7 +53,7 @@ services:
 
   survival1:
     user: $UID:$GID
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java21
     environment:
       UID: $UID
       GID: $GID

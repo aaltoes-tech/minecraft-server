@@ -48,13 +48,19 @@ openssl rand -base64 32 > velocity.secret
 
 ### 3. Running the Server
 
-1. Set your user and group IDs for proper file permissions:
+1. Create the store directory:
+```bash
+mkdir -p store/mc1
+mkdir -p store/proxy
+```
+
+2. Set your user and group IDs for proper file permissions:
 ```bash
 export UID=$(id -u)
 export GID=$(id -g)
 ```
 
-2. Start the server:
+3. Start the server:
 ```bash
 docker compose up -d
 ```

@@ -1,12 +1,11 @@
 const { Client, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
 const WebSocket = require('ws');
 
 const config = {
-  token: token,
-  channelId: '643453729776992264',
-  wsPort: 8080,
-  authToken: ''
+  token: process.env.DISCORD_TOKEN ?? '',
+  channelId: process.env.DISCORD_CHANNEL_ID ?? '',
+  wsPort: process.env.WS_PORT ?? 8080,
+  authToken: process.env.AUTH_TOKEN ?? ''
 };
 
 const client = new Client({
