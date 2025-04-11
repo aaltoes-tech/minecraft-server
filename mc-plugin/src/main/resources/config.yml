@@ -1,0 +1,6 @@
+websocket:
+  url: ws://discord-bot:8080
+  auth-token: 
+  log-to-console: true
+chat:
+  discord-prefix: "&b[Discord] &f"
